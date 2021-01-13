@@ -29,7 +29,12 @@ So, assuming we want to just extract the code section at 1MB for a ROM image (bu
 
     zlink --memory 2MB --offset 1MB --section code my_startup.obj my_graphics.obj my_app.obj --offset 1MB --limit 2MB --dump my_rom_image.bin
 
+### Additional Documentation
+
+Besides the command line arguments, most of the documentation (e.g. about why the linker exists and what role it plays) can be found in the documentation of [the assembler](https://github.com/ZYSF/ZAsm/). In the future, the linker might be reimplemented as a special function of the assembler (but for now it's a separate tool).
+
 ## TODO
 
  * Better documentation & testing
  * Probably add some more operators
+ * Likely rewrite it in C eventually
